@@ -14,13 +14,19 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "pretest": "yarn lint",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "plugin:jsx-a11y/recommended"
+    ],
+    "plugins": [
+      "jsx-a11y"
     ]
   },
   "browserslist": {
@@ -36,7 +42,6 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.28.0",
     "eslint-plugin-jsx-a11y": "^6.4.1"
   }
 }
